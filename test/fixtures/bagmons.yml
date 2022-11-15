@@ -2,12 +2,16 @@
 
 one:
   name: MyString
-  number: 1
+  number: MyString
   image: MyString
-  type_id: 1
+  first_type_id: 1
+  second_type_id: 1
+  third_type_id: 1
 
 two:
   name: MyString
-  number: 1
+  number: MyString
   image: MyString
-  type_id: 1
+  first_type_id: 1
+  second_type_id: 1
+  third_type_id: 1

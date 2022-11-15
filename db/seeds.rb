@@ -38,26 +38,35 @@ types.each do |creatingTypes|
 Type.find_or_create_by(creatingTypes)
 
 end
-
 puts "Seeding types done."
 
 
+
+
 puts "Seeding bagmons..."
-def seed_image(typeId)
-    File.open(File.join(Rails.root, "/app/assets/images/seed/#{typeId}.jpg"))
+
+def seed_image(number)
+    "seed/#{number}.png"
 end
 
+
 bagmonlist = [
-    {name: 'Voara', number: '001', type_id: 3},
-    {name: 'Capi', number: '007', type_id: 8}    
+    {number: "001", name: "Voara", first_type_id: 1},
+    {number: "002", name: "Azurara", first_type_id: 1, second_type_id: 3},
+    {number: "003", name: "Ararazul", first_type_id: 3, second_type_id: 4, third_type_id: 5}    
 ]
   
 bagmonlist.each do |attributes|
-attributes[:image] = seed_image(attributes[:number]);
-Bagmon.find_or_create_by(attributes)
+    puts "Bringing life to #{attributes[:name]}";
+    attributes[:image] = seed_image(attributes[:number])
+    Bagmon.find_or_create_by(attributes)
 end
 
 puts "Seeding bagmons done."
+
+
+
+
 
 
 

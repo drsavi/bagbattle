@@ -1,3 +1,3 @@
 class Type < ApplicationRecord
-    #has_many :bagmons
+    has_many :bagmons
 end

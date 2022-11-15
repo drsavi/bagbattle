@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_15_042851) do
+ActiveRecord::Schema.define(version: 2022_11_15_164728) do
 
   create_table "bagmons", force: :cascade do |t|
     t.string "name"
-    t.integer "number"
+    t.string "number"
     t.string "image"
-    t.integer "type_id"
+    t.integer "first_type_id", null: false
+    t.integer "second_type_id"
+    t.integer "third_type_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "state_id"

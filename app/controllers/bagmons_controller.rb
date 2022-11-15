@@ -65,6 +65,6 @@ class BagmonsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def bagmon_params
-      params.require(:bagmon).permit(:name, :number, :image, :type_id)
+      params.require(:bagmon).permit(:name, :number, :image, :first_type_id, :second_type_id, :third_type_id)
     end
 end

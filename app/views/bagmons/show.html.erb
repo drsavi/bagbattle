@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <td><%= image_tag @bagmon.image, alt: 'fun', style: 'height:400px; width:auto;' %></td>
+</p>
+
+<p>
   <strong>Name:</strong>
   <%= @bagmon.name %>
 </p>
@@ -11,13 +15,18 @@
 </p>
 
 <p>
-  <strong>Image:</strong>
-  <%= @bagmon.image %>
+  <strong>First type:</strong>
+  <%= @bagmon.first_type_id %>
 </p>
 
 <p>
-  <strong>Type:</strong>
-  <%= @bagmon.type_id %>
+  <strong>Second type:</strong>
+  <%= @bagmon.second_type_id %>
+</p>
+
+<p>
+  <strong>Third type:</strong>
+  <%= @bagmon.third_type_id %>
 </p>
 
 <%= link_to 'Edit', edit_bagmon_path(@bagmon) %> |

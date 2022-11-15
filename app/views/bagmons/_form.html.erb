@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :number %>
-    <%= form.number_field :number %>
+    <%= form.text_field :number %>
   </div>
 
   <div class="field">
@@ -27,8 +27,18 @@
   </div>
 
   <div class="field">
-    <%= form.label :type_id %>
-    <%= form.number_field :type_id %>
+    <%= form.label :first_type_id %>
+    <%= form.number_field :first_type_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :second_type_id %>
+    <%= form.number_field :second_type_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :third_type_id %>
+    <%= form.number_field :third_type_id %>
   </div>
 
   <div class="actions">
