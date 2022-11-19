@@ -4,9 +4,7 @@ class CreateBagmons < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :number
       t.string :image
-      t.integer :first_type_id, :null => false
-      t.integer :second_type_id, :null => true
-      t.integer :third_type_id, :null => true
+      t.string :type_id
 
       t.timestamps
     end

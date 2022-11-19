@@ -1,5 +1,7 @@
 class BagmonsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_bagmon, only: %i[ show edit update destroy ]
+  before_action :set_type_options, only: %i[ create new edit update ]
 
   # GET /bagmons or /bagmons.json
   def index
@@ -65,6 +67,12 @@ class BagmonsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def bagmon_params
-      params.require(:bagmon).permit(:name, :number, :image, :first_type_id, :second_type_id, :third_type_id)
+      params.require(:bagmon).permit(:name, :number, :image, :type_id)
     end
+
+    def set_type_options
+      @type_options = Type.all.pluck(:name, :id)
+    end
+    
 end
+

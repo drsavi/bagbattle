@@ -10,19 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_15_164728) do
+ActiveRecord::Schema.define(version: 2022_11_19_180835) do
 
   create_table "bagmons", force: :cascade do |t|
     t.string "name"
     t.string "number"
     t.string "image"
-    t.integer "first_type_id", null: false
-    t.integer "second_type_id"
-    t.integer "third_type_id"
+    t.string "type_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "state_id"
-    t.index ["state_id"], name: "index_bagmons_on_state_id"
+    t.integer "type_id_id"
+    t.index ["type_id_id"], name: "index_bagmons_on_type_id_id"
   end
 
   create_table "types", force: :cascade do |t|
@@ -30,6 +28,18 @@ ActiveRecord::Schema.define(version: 2022_11_15_164728) do
     t.string "color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
 end
