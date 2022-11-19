@@ -1,0 +1,75 @@
+<p id='data' style="display: none;">
+    <%= @rounds %>
+</p>
+
+<% if @bagmon1 && @bagmon2 %>
+    <div id="result" class="container d-flex flex-column gap-3">
+        <h2 class="text-center">Result</h2>
+        <div class="d-flex align-items-center justify-content-between">
+            <p>
+              <%= image_tag @bagmon1.image, size: "250x250" %>
+            </p>
+            <p>
+              X
+            </p>
+            <p>
+              <%= image_tag @bagmon2.image, size: "250x250" %>
+            </p>
+        </div>
+    </div>
+<% else %>
+    <h1 class="text-center mb-3">Choose 2 Bagmons</h1>
+    <form action="/battle" class="container d-flex flex-column gap-3 w-50">
+        <div class="d-flex flex-row gap-3 align-items-center">
+            <div class="form-group w-50">
+                <label for="bagmon1">Bagmon 1</label>
+                <select required id="bagmon1" name="bagmon1" class="form-control">
+                    <option selected disabled>Select...</option>
+                    <% @bagmons.each do |bagmon| %>
+                        <option value="<%= bagmon.id %>"><%= bagmon.name %></option>
+                    <% end %>
+                </select>
+            </div>
+            <p>
+              X
+            </p>
+            <div class="form-group w-50">
+                <label for="bagmon2">Bagmon 2</label>
+                <select required id="bagmon2" name="bagmon2" class="form-control">
+                    <option selected disabled>Select...</option>
+                    <% @bagmons.each do |bagmon| %>
+                        <option value="<%= bagmon.id %>"><%= bagmon.name %></option>
+                    <% end %>
+                </select>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Battle</button>
+    </form>
+<% end %>
+
+<% if @bagmon1 && @bagmon2 %>
+    <script>
+        console.log("Bagmon 1: <%= @bagmon1.name %>")
+        console.log("Bagmon 2: <%= @bagmon2.name %>")
+
+        const rounds = JSON.parse(document.getElementById('data').innerHTML)
+
+        function delay(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        // To each round delay and console.log the round
+
+        async function battle() {
+            for (let i = 0; i < rounds.length; i++) {
+                await delay(1000);
+                document.querySelector('#result').innerHTML += `<p class="text-center">${rounds[i]}</p>`
+
+                window.scrollTo(0, document.body.scrollHeight);
+
+            }
+        }
+
+        battle();
+    </script>
+<% end %>

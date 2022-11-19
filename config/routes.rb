@@ -2,11 +2,9 @@ Rails.application.routes.draw do
   devise_for :admins
   namespace :users_backoffice do
     get 'welcome/index'
-    get 'welcome/rails'
-    get 'welcome/g'
-    get 'welcome/controller'
-    get 'welcome/users_backoffice'
   end
+
+  resources :battle
   devise_for :users
   resources :bagmons
   resources :types
