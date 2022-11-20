@@ -4,6 +4,10 @@ Rails.application.routes.draw do
     get 'welcome/index'
   end
 
+  devise_scope :user do
+    root :to => 'devise/sessions#new'
+  end
+
   resources :battle
   devise_for :users
   resources :bagmons

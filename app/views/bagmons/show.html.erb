@@ -1,25 +1,15 @@
+<%= stylesheet_link_tag 'bagmon-detail.css' %>
+
 <p id="notice"><%= notice %></p>
+
 <body style='background-color: <%=@bagmon.type.color %>; '>
-<div  style='font-size: 35px; text-decoration: none'> <%= link_to '⬅️', bagmons_path %></div>
-  <div style='display: flex; flex-direction: column; align-items: center;'>
-    <div class="card border-light mb-3" style="width: 18rem; top: 0;
-      left: 0;
-      right: 0;
-      z-index: 3000;">
-        <h1 style='text-align: center; padding: 1rem;'><%= @bagmon.name.upcase %> #<%= @bagmon.number%></h1>
-          <div style='background-color: background-color: <%=@bagmon.type.color %>; white; display: flex; flex-direction: column; padding: 1rem;'>
-    
-            <p>
-              <strong>Type:</strong>
-              <%= @bagmon.type.name%>
-            </p>
+  <div id="arrow-back"><%= link_to '←', bagmons_path %></div>
 
-            <p>
-              <%= image_tag @bagmon.image, alt: 'fun', style: 'height:600px; width:auto;' %>
-            </p>
-
-            
-          </div>
+  <div id="display-bag-detail">
+    <div>
+      <h1><%= @bagmon.name.upcase %> #<%= @bagmon.number%></h1>
+      <p>BAGMON DO TIPO <%= @bagmon.type.name.upcase%></p>
+      <p id="bag-detail-image"><%= image_tag @bagmon.image, alt: 'fun', style: 'height:400px; width:auto;'%></p>
     </div>
   </div>
 </body>
