@@ -14,12 +14,10 @@ class BagmonsTest < ApplicationSystemTestCase
     visit bagmons_url
     click_on "New Bagmon"
 
-    fill_in "First type", with: @bagmon.first_type_id
+    fill_in "First type", with: @bagmon.type_id
     fill_in "Image", with: @bagmon.image
     fill_in "Name", with: @bagmon.name
     fill_in "Number", with: @bagmon.number
-    fill_in "Second type", with: @bagmon.second_type_id
-    fill_in "Third type", with: @bagmon.third_type_id
     click_on "Create Bagmon"
 
     assert_text "Bagmon was successfully created"
@@ -30,12 +28,10 @@ class BagmonsTest < ApplicationSystemTestCase
     visit bagmons_url
     click_on "Edit", match: :first
 
-    fill_in "First type", with: @bagmon.first_type_id
+    fill_in "First type", with: @bagmon.type_id
     fill_in "Image", with: @bagmon.image
     fill_in "Name", with: @bagmon.name
     fill_in "Number", with: @bagmon.number
-    fill_in "Second type", with: @bagmon.second_type_id
-    fill_in "Third type", with: @bagmon.third_type_id
     click_on "Update Bagmon"
 
     assert_text "Bagmon was successfully updated"

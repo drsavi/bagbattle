@@ -4,14 +4,10 @@ one:
   name: MyString
   number: MyString
   image: MyString
-  first_type_id: 1
-  second_type_id: 1
-  third_type_id: 1
+  type_id: 1
 
 two:
   name: MyString
   number: MyString
   image: MyString
-  first_type_id: 1
-  second_type_id: 1
-  third_type_id: 1
+  type_id: 1

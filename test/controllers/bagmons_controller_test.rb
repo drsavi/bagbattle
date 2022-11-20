@@ -17,7 +17,7 @@ class BagmonsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create bagmon" do
     assert_difference('Bagmon.count') do
-      post bagmons_url, params: { bagmon: { first_type_id: @bagmon.first_type_id, image: @bagmon.image, name: @bagmon.name, number: @bagmon.number, second_type_id: @bagmon.second_type_id, third_type_id: @bagmon.third_type_id } }
+      post bagmons_url, params: { bagmon: { type_id: @bagmon.type_id, image: @bagmon.image, name: @bagmon.name, number: @bagmon.number} }
     end
 
     assert_redirected_to bagmon_url(Bagmon.last)
@@ -34,7 +34,7 @@ class BagmonsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update bagmon" do
-    patch bagmon_url(@bagmon), params: { bagmon: { first_type_id: @bagmon.first_type_id, image: @bagmon.image, name: @bagmon.name, number: @bagmon.number, second_type_id: @bagmon.second_type_id, third_type_id: @bagmon.third_type_id } }
+    patch bagmon_url(@bagmon), params: { bagmon: { type_id: @bagmon.type_id, image: @bagmon.image, name: @bagmon.name, number: @bagmon.number } }
     assert_redirected_to bagmon_url(@bagmon)
   end
 
