@@ -1,4 +1,4 @@
-<%= stylesheet_link_tag 'login.css' %>
+<%= stylesheet_link_tag 'bagmon.css' %>
 
 
 <body style="background-color: #595959">
@@ -6,7 +6,7 @@
   <p id="notice"><%= notice %></p>
     <div class="bagmon-description">
       <h1><strong>Bagmons</strong></h1>
-      <h2>Lutar</h2>
+      <h2><%= link_to 'Batalha', battle_index_path, class: "bagmons-to-battle-link" %></h2>
     </div>
 
     <div id="bagmon-shelf">
@@ -14,7 +14,7 @@
           <div id="bagmon-name">
             <h2><%= bagmon.name %></h2>
             <div id="bagmon-image">
-              <%= link_to (image_tag(bagmon.image, alt: 'fun', style: 'height:300px; width:168px;')), bagmon %>
+              <%= link_to (image_tag(bagmon.image, alt: 'fun', style: 'height:300px; width:auto;')), bagmon %>
             </div>
           </div>
         </a>
