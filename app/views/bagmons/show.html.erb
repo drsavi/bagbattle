@@ -7,7 +7,7 @@
 
   <div id="display-bag-detail">
     <div>
-      <h1><%= @bagmon.name.upcase %> #<%= @bagmon.number%></h1>
+      <h1>#<%= @bagmon.number%> - <%=@bagmon.name.upcase %> </h1>
       <p>BAGMON DO TIPO <%= @bagmon.type.name.upcase%></p>
       <p id="bag-detail-image"><%= image_tag @bagmon.image, alt: 'fun', style: 'height:400px; width:auto;'%></p>
     </div>

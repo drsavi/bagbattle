@@ -3,6 +3,9 @@
     flex-wrap: wrap; 
     justify-content: space-between;
     margin-bottom: 15px; 
+    color: #FFF; 
+    text-shadow: 3px 3px 3px #333;
+    
 }
 
 #bagmon-shelf{
@@ -14,12 +17,13 @@
 }
 
 #bagmon-name{
-    color: #333; 
+    color: #FFF; 
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
     align-items: center; 
     height: 100%;
+    text-shadow: 3px 3px 3px #333;
 }
 
 #bagmon-image{

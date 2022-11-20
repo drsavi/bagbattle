@@ -10,7 +10,7 @@
 puts "Seeding types..."
 
 types = [
-    {name: 'Planta', color: '#609C42'},
+    {name: 'Planta', color: '#9BBB31'},
     {name: 'Fogo', color: '#F2673C'},
     {name: 'Voador', color: '#79B1B5'},
     {name: 'Normal', color: '#A6A6A6'},

@@ -1,24 +1,26 @@
 <%= stylesheet_link_tag 'login.css' %>
 
-<p id="notice"><%= notice %></p>
 
-<div class="bagmon-container">
-  <div class="bagmon-description">
-    <h1><strong>Bagmons</strong></h1>
-    <h2>Lutar</h2>
-  </div>
+<body style="background-color: #595959">
+  <div class="bagmon-container" >
+  <p id="notice"><%= notice %></p>
+    <div class="bagmon-description">
+      <h1><strong>Bagmons</strong></h1>
+      <h2>Lutar</h2>
+    </div>
 
-  <div id="bagmon-shelf">
-    <% @bagmons.each do |bagmon| %>
-        <div id="bagmon-name">
-          <h2><%= bagmon.name %></h2>
-          <div id="bagmon-image">
-            <%= link_to (image_tag(bagmon.image, alt: 'fun', style: 'height:300px; width:168px;')), bagmon %>
+    <div id="bagmon-shelf">
+      <% @bagmons.each do |bagmon| %>
+          <div id="bagmon-name">
+            <h2><%= bagmon.name %></h2>
+            <div id="bagmon-image">
+              <%= link_to (image_tag(bagmon.image, alt: 'fun', style: 'height:300px; width:168px;')), bagmon %>
+            </div>
           </div>
-        </div>
-      </a>
-    <% end %>
-  </div>
+        </a>
+      <% end %>
+    </div>
 
-</div>
-<br>
+  </div>
+  <br>
+<body>
