@@ -4,40 +4,40 @@ class BattleController < ApplicationController
     def index
         @bagmons = Bagmon.all
     
-        if (params[:bagmon1] && params[:bagmon2]) 
-          @bagmon1 = Bagmon.find(params[:bagmon1])
-          @bagmon2 = Bagmon.find(params[:bagmon2])
+        if (params[:firstBagmon] && params[:secondBagmon]) 
+          @firstBagmon = Bagmon.find(params[:firstBagmon])
+          @secondBagmon = Bagmon.find(params[:secondBagmon])
           @rounds = []
     
-          lifeBagmon1 = 100
-          lifeBagmon2 = 100
+          lifefirstBagmon = 100
+          lifesecondBagmon = 100
     
           # Random bagmon attack first
-          bagmonAttacking = rand(1..2) == 1 ? @bagmon1 : @bagmon2
+          bagmonAttacking = rand(1..2) == 1 ? @firstBagmon : @secondBagmon
     
     
-          while (lifeBagmon1 > 0 && lifeBagmon2 > 0) do
+          while (lifefirstBagmon > 0 && lifesecondBagmon > 0) do
     
             # Bagmon 1 attack bagmon 2 and remove random between 5 adn 10 life points
     
-            if (bagmonAttacking == @bagmon1)
+            if (bagmonAttacking == @firstBagmon)
               attack = rand(5..15)
-              lifeBagmon2 -= attack
-              @rounds << @bagmon1.name + " attacked " + @bagmon2.name+ " and remove #{attack} life points"
-              bagmonAttacking = @bagmon2
+              lifesecondBagmon -= attack
+              @rounds << @firstBagmon.name + " atacou " + @secondBagmon.name+ " e infligiu #{attack} de dano."
+              bagmonAttacking = @secondBagmon
             else
               attack = rand(5..15)
-              lifeBagmon1 -= attack
-              @rounds << @bagmon2.name + " attacked " + @bagmon1.name + " and remove #{attack} life points"
-              bagmonAttacking = @bagmon1
+              lifefirstBagmon -= attack
+              @rounds << @secondBagmon.name + " atacou " + @firstBagmon.name + " e infligiu #{attack} de dano."
+              bagmonAttacking = @firstBagmon
             end
           end
     
           # Display winner
-          if (lifeBagmon1 <= 0)
-            @rounds << @bagmon2.name + " won!"
-          elsif (lifeBagmon2 <= 0)
-            @rounds << @bagmon1.name + " won!"
+          if (lifefirstBagmon <= 0)
+            @rounds << @secondBagmon.name + ", o Bagmon aliado venceu!"
+          elsif (lifesecondBagmon <= 0)
+            @rounds << @firstBagmon.name + ", o Bagmon inimigo venceu!"
           end
         end
     

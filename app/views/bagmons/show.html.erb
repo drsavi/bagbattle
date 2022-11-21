@@ -3,13 +3,19 @@
 <p id="notice"><%= notice %></p>
 
 <body style='background: linear-gradient(90deg, <%=@bagmon.type.color %> 10%, #404040 100%); '>
-  <div id="arrow-back"><%= link_to '←', bagmons_path %></div>
+  <div><%= link_to '←', bagmons_path, class: "arrow-back" %></div>
 
   <div id="display-bag-detail">
     <div>
-      <h1>#<%= @bagmon.number%> - <%=@bagmon.name.upcase %> </h1>
-      <p>BAGMON DO TIPO <%= @bagmon.type.name.upcase%></p>
+      <div id=detail-name-and-type>
+        <h1><%=@bagmon.name.upcase%></h1>
+        <p>BAGMON DO TIPO <%= @bagmon.type.name.upcase%></p>
+        
+      </div>
       <p id="bag-detail-image"><%= image_tag @bagmon.image, alt: 'fun', style: 'height:400px; width:auto;'%></p>
+      <div id=detail-name-and-type>
+        <p>#<%= @bagmon.number%></p>
+      </div>
     </div>
   </div>
 </body>

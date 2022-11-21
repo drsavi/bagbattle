@@ -1,4 +1,4 @@
-#arrow-back{
+.arrow-back{
     font-size: 35px; 
     text-decoration: none;
 }
@@ -18,4 +18,15 @@
     border: 7px solid #333;
     box-shadow: 5px 10px #4d4d4d;
     border-radius: 7px;
+}
+
+#detail-name-and-type{
+    color: #333; 
+    background-color: #FFF;
+    border: 7px solid #333;
+    box-shadow: 5px 10px #4d4d4d;
+    border-radius: 7px;
+    height:auto; 
+    width:225px;
+    text-align: center;
 }
