@@ -1,9 +1,9 @@
 <%= stylesheet_link_tag 'login.css' %>
 
-<body style="background-color: #333">
+<body style="background-color: #FFF; padding: 5%; display:flex; flex-direction:row; justify-content:center;">
   <div class="container">
     <div class="box">
-    <h2 id="login">Log In</h2>
+    <h2 id="login">Login</h2>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field">
@@ -24,11 +24,14 @@
       <% end %>
 
       <div class="actions">
-        <%= f.submit "Log in" %>
+        <%= f.submit "Logar" %>
       </div>
     <% end %>
 
     <%= render "users/shared/links" %>
     </div>
+  </div>
+  <div  class="second-container">
+    <%= image_tag("seed/007.png", alt: 'fun', style: 'height:450px; width:auto;') %>
   </div>
 <body>
