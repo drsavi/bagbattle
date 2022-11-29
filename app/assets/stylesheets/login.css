@@ -6,25 +6,28 @@
 
 .second-container{
     justify-content:center;
-    display:flex; 
+    display:flex;    
 }
 
 .box{
     background: #02075D;
-    border-radius: 0;
+    background-image: url(login-direita.png);
+    background-size: cover;
+    border-radius: 200px;
     justify-content:center; 
     align-items: center; 
     display:flex; 
     flex-direction:column;
     max-width: fit-content;
     padding: 17% 12%;
-    border-color: #FFF;
+    border-color: rgb(255, 255, 255);
     border-style: solid;
     border-width: 1px;
+    margin: 20px;
 }
 
 #login{
-    color: #FFF;
+    color: #000;
 }
 
 .field{
@@ -48,13 +51,13 @@
 }
 
 .classe{
-    color: #FFF;
+    color: #000;
 }
 
 #forgot-password{
-    color: #FFF;
+    color: #000;
 }
 
 #sign-up{
-    color: #FFF;
+    color: #000;
 }

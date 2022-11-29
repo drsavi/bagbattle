@@ -12,10 +12,11 @@
     <div id="bagmon-shelf">
       <% @bagmons.each do |bagmon| %>
           <div id="bagmon-card">
-            <div id="bagmon-name"><h2><%= bagmon.name %></h2></div>
+            
             <div id="bagmon-image">
               <%= link_to (image_tag(bagmon.image, alt: 'fun', style: 'height:300px; width:auto;')), bagmon %>
             </div>
+            <div id="bagmon-name"><%= bagmon.name %></div>
           </div>
         </a>
       <% end %>

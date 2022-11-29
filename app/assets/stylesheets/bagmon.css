@@ -3,16 +3,16 @@
     flex-wrap: wrap; 
     justify-content: space-between;
     margin-bottom: 15px; 
-    color: #FFF; 
-    text-shadow: 3px 3px 3px #333;
+    color: #000; 
+    text-shadow: 3px 3px 3px #000;
 }
 
 .bagmon-descriptiona{
-    color: #333; 
+    color: #000; 
     background-color: #FFF;
-    border: 1px solid #333;
+    border: 3px solid #000;
     box-shadow: 1px 1px #4d4d4d;
-    border-radius: 3px;
+    border-radius: 5px;
     text-shadow: 1px 1px 1px #4d4d4d;
     height:auto; 
     width:168px;
@@ -20,17 +20,17 @@
 }
 
 .bagmon-description{
-    color: #333; 
+    color: #000; 
     text-shadow: 2px 2px 2px #808080;
     text-align: center;
 }
 
 .batalha-description{
-    color: #333; 
+    color: #000; 
     background-color: #FFF;
-    border: 1px solid #333;
+    border: 3px solid #000;
     box-shadow: 1px 1px #4d4d4d;
-    border-radius: 3px;
+    border-radius: 5px;
     text-shadow: 1px 1px 1px #4d4d4d;
     height:auto; 
     width:168px;
@@ -47,38 +47,40 @@
 }
 
 #bagmon-card{
-    color: #333; 
+    color: #000; 
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
     align-items: center; 
     height: 100%;
+    font-weight: bold
 }
 
 #bagmon-name{
     background-color: #FFF;
-    border: 1px solid #333;
+    border: 3px solid #000;
     box-shadow: 2px 2px #4d4d4d;
-    border-radius: 3px;
+    border-radius: 5px;
     text-shadow: 1px 1px 1px #808080;
     height:auto; 
     width:168px;
     text-align: center;
     margin-bottom: 10px;
+    margin-top: 3px;
 }
 
 #bagmon-image{
     width: 168px; 
     height: 300px; 
-    border: 1px solid #333;
+    border: 3px solid #000;
     box-shadow: 2px 2px #808080;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 .bagmons-to-battle-link{
-    color: #333; 
+    color: #000; 
     height: 100%;
-    text-shadow: 1px 1px 1px #333;
+    text-shadow: 1px 1px 1px #000;
     text-decoration: none;
     font-weight: bold;
 }

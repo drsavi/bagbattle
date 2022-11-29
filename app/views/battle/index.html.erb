@@ -1,6 +1,6 @@
  <body style="background-color: #FFF; padding:3%; flex-direction:column; display:flex; color:#FFF">
     <div><%= link_to '←', bagmons_path, class: "arrow-back" %></div>
-    <div id='data' style="visibility: hidden;"><%= @rounds %></div>
+    <div id='data' style="visibility: hidden; font-size:1px; color:#000"><%= @rounds %></div>
     <div style="">
         <% if @firstBagmon && @secondBagmon %>
             <div id="result" style="background-color: ;">
@@ -24,7 +24,7 @@
                     <div >
                         <label for="firstBagmon">Bagmon Aliado</label>
                         <select required id="firstBagmon" name="firstBagmon" class="form-control">
-                            <option selected disabled>Selecionar Bagmon</option>
+                            <option selected disabled>Escolha seu Bagmon</option>
                             <% @bagmons.each do |bagmon| %>
                                 <option value="<%= bagmon.id %>"><%= bagmon.name %></option>
                             <% end %>
@@ -36,7 +36,7 @@
                     <div>
                         <label for="secondBagmon">Bagmon Inimigo</label>
                         <select required id="secondBagmon" name="secondBagmon">
-                            <option selected disabled>Selecionar Bagmon</option>
+                            <option selected disabled>Escolha o Bagmon adversário</option>
                             <% @bagmons.each do |bagmon| %>
                                 <option value="<%= bagmon.id %>"><%= bagmon.name %></option>
                             <% end %>
@@ -44,7 +44,7 @@
                     </div>
                 </div>
                 <div style="flex-direction:column; display:flex; justify-content:center; align-items: center;">
-                    <button type="submit" class="btn btn-primary">INICIAR</button>
+                    <button type="submit" class="btn btn-primary">BATALHA!</button>
                 </div>
             </form>
         <% end %>
