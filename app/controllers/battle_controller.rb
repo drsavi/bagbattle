@@ -12,7 +12,6 @@ class BattleController < ApplicationController
           lifefirstBagmon = 100
           lifesecondBagmon = 100
     
-          # Random bagmon attack first
           bagmonAttacking = rand(1..2) == 1 ? @firstBagmon : @secondBagmon
     
     
@@ -35,9 +34,9 @@ class BattleController < ApplicationController
     
           # Display winner
           if (lifefirstBagmon <= 0)
-            @rounds << @secondBagmon.name + ", o Bagmon aliado venceu!"
+            @rounds << @secondBagmon.name + ", o Bag Migo é o vencedor!"
           elsif (lifesecondBagmon <= 0)
-            @rounds << @firstBagmon.name + ", o Bagmon inimigo venceu!"
+            @rounds << @firstBagmon.name + ", o Bagmon oponente é o vencedor!"
           end
         end
     
