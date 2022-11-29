@@ -1,28 +1,36 @@
 # bag-battle
 Projeto web contendo uma batalha de Bagmons utilizando a arte do (@bagilustrador) web realizado com ruby on rails (v.2.6.10), autenticação utilizando a gem devise, seed dos bagmons, visualização da lista de bagmons e detalhes dos mesmos.
 
-*Listar todos os Bagmons*
+## *Listar todos os Bagmons*
+
 ![Alt text](/public/readme/tela-bagmons.png?raw=true "Listar todos os Bagmons")
 
-*Detalhe Bagmon*
+## *Detalhe Bagmon*
+
 ![Alt text](/public/readme/tela-detalhe-bagmon.png?raw=true "Detalhe Bagmon")
 
-*Inicio Batalha*
+## *Inicio Batalha*
+
 ![Alt text](/public/readme/tela-inicio-batalha.png?raw=true "Inicio Batalha")
 
-*Inicio Batalha Escolhendo Inimigo*
+## *Inicio Batalha Escolhendo Inimigo*
+
 ![Alt text](/public/readme/tela-inicio-batalha-escolha-inimigo.png?raw=true "Inicio Batalha Escolhendo Inimigo")
 
-*Batalhando*
+## *Batalhando*
+
 ![Alt text](/public/readme/tela-batalhando.png?raw=true "Batalhando")
 
-*Login*
+## *Login*
+
 ![Alt text](/public/readme/tela-login.png?raw=true "Login")
 
-*SignUp*
+## *SignUp*
+
 ![Alt text](/public/readme/tela-signup.png?raw=true "SignUp")
 
-*Forgot Password*
+## *Forgot Password*
+
 ![Alt text](/public/readme/tela-forgot-password.png?raw=true "Forgot Password")
 
 # VAGRANT
